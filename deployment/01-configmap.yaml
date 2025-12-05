@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap-mcp-weather
+  namespace: #(NAMESPACE)#
+data:
+  ENV: "production"
+  TIMEZONE_API_KEY: "#(TIMEZONE_API_KEY)#"
+  WEATHER_API_KEY: "#(WEATHER_API_KEY)#"
+  LOG_LEVEL: "INFO"

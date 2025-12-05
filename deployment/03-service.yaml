@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mcp-weather-service
+  namespace: #(NAMESPACE)#
+spec:
+  selector:
+    app: mcp-weather
+  ports:
+  - protocol: TCP
+    name: mcp
+    port: 80
+    targetPort: 8080
+  type: LoadBalancer
